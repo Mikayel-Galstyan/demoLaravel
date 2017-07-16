@@ -10,38 +10,39 @@ Simple user management system consisting from users section and administrator se
 
 
 
-1.1. There are 3 pages for the user:
-	Sign-up page
-		Displays form with the following fields:
-		1. First name
+	1.1. There are 3 pages for the user:
+		Sign-up page
+			Displays form with the following fields:
+			
+			1. First name
 
-		2. Last name
+			2. Last name
 
-		3. Username
+			3. Username
 
-		4. Password
+			4. Password
 
-		5. Confirm password
-		Rules:
-		1. All fields are mandatory
+			5. Confirm password
+			Rules:
+			1. All fields are mandatory
 
-		2. Username should be unique, needs to be checked against database
-		3. Password and confirm password should be equal
-		If validation fails, corresponding error messages should be shown (wording doesn't matter)
-		If validation is successful, user record should be saved to the database, user is redirected to the login page
-	Login page
-		Displays form with the following fields:
-		1. Username
-		2. Password
-		Rules:
-		1. All fields are mandatory
-		2. Username and password combination should have a match in the database
-		3. Check if user is active/disabled (disabled user cannot log in)
-		If validation fails, corresponding error messages should be shown (wording doesn't matter)
-		If validation is successful, user should be logged in and redirected to home page
-	Home page
-		1. Displays message stating "Welcome, $firstName"
-		2. Contains logout link, clicking the link will logout the user and redirect him to the login page
+			2. Username should be unique, needs to be checked against database
+			3. Password and confirm password should be equal
+			If validation fails, corresponding error messages should be shown (wording doesn't matter)
+			If validation is successful, user record should be saved to the database, user is redirected to the login page
+		Login page
+			Displays form with the following fields:
+			1. Username
+			2. Password
+			Rules:
+			1. All fields are mandatory
+			2. Username and password combination should have a match in the database
+			3. Check if user is active/disabled (disabled user cannot log in)
+			If validation fails, corresponding error messages should be shown (wording doesn't matter)
+			If validation is successful, user should be logged in and redirected to home page
+		Home page
+			1. Displays message stating "Welcome, $firstName"
+			2. Contains logout link, clicking the link will logout the user and redirect him to the login page
 2. There are 4 pages for the administrator:
 	List Users page
 		Shows the list of the users in the form the table, 
