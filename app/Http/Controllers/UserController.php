@@ -24,13 +24,16 @@ class UserController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($perPage = 10) {
+    public function index() {
         //Get all users and pass it to the view
-        if(isset($_GET['perPage'])){
-            $perPage = $_GET["perPage"];
+        if(!Session::get('perPage')){
+            Session::put('perPage', 10);
         }
-        $users = User::paginate($perPage);
-        return view('users.index')->with('users', $users)->with("perPage",$perPage);
+        if(isset($_GET['perPage'])){
+            Session::put('perPage', $_GET['perPage']);
+        }
+        $users = User::paginate(Session::get("perPage"));
+        return view('users.index')->with('users', $users)->with("perPage",Session::get("perPage"));
     }
 
     /**
