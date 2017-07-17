@@ -6,13 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddDescriptionToUsersTable' => $baseDir . '/database/migrations/2017_07_16_220702_add_description_to_users_table.php',
     'AddUsernameFieldToUsersTable' => $baseDir . '/database/migrations/2017_07_16_173530_add_username_field_to_users_table.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
-    'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
-    'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\PermissionController' => $baseDir . '/app/Http/Controllers/PermissionController.php',
@@ -43,6 +42,7 @@ return array(
     'Collective\\Html\\HtmlServiceProvider' => $vendorDir . '/laravelcollective/html/src/HtmlServiceProvider.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePermissionTables' => $baseDir . '/database/migrations/2017_07_16_002327_create_permission_tables.php',
+    'CreateSessionsTable' => $baseDir . '/database/migrations/2017_07_16_224146_create_sessions_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'Cron\\AbstractField' => $vendorDir . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
@@ -2955,6 +2955,7 @@ return array(
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
     'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => $vendorDir . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+    'UsersTableSeeder' => $baseDir . '/database/seeds/UsersTableSeeder.php',
     'Webmozart\\Assert\\Assert' => $vendorDir . '/webmozart/assert/src/Assert.php',
     'XdgBaseDir\\Xdg' => $vendorDir . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
     'phpDocumentor\\Reflection\\DocBlock' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock.php',

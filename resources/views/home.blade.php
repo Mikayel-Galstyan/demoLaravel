@@ -8,7 +8,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
                 <div class="panel-body">
-                    Welcome {{ Auth::user()->first_name }} You are logged in!
+                    Welcome {{ Auth::user()->username }} You are logged in!
                 </div>
             </div>
         </div>

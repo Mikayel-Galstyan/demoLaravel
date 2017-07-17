@@ -55,11 +55,11 @@ class UserController extends Controller {
         $this->validate($request, [
             'first_name'=>'required|max:120',
             'last_name'=>'required|max:120',
-            'username'=>'required|unique:users',
+            'username'=>'required|max:255|min:4|unique:users',
             'password'=>'required|min:6|confirmed'
         ]);
 
-        $user = User::create($request->only('username', 'first_name','last_name', 'password','active')); //Retrieving only the email and password data
+        $user = User::create($request->only('username', 'first_name','last_name', 'password','active','description')); //Retrieving only the email and password data
 
         $roles = $request['roles']; //Retrieving the roles field
         //Checking if a role was selected
@@ -114,10 +114,10 @@ class UserController extends Controller {
         $this->validate($request, [
             'first_name'=>'required|max:120',
             'last_name'=>'required|max:120',
-            'username'=>'required|unique:users,username,'.$id,
+            'username'=>'required|max:255|min:4|unique:users,username,'.$id,
             'password'=>'required|min:6|confirmed'
         ]);
-        $input = $request->only(['first_name','last_name', 'username', 'password','active']); //Retreive the name, email and password fields
+        $input = $request->only(['first_name','last_name', 'username', 'password','active','description']); //Retreive the name, email and password fields
         $roles = $request['roles']; //Retreive all roles
         $user->fill($input)->save();
 
